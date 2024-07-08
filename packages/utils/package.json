@@ -1,0 +1,12 @@
+{
+  "name": "@pansy/example-utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo \"Build utils\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "@pansy/example-request",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo \"Build request\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@pansy/example-utils": "workspace:*"
+  }
+}
