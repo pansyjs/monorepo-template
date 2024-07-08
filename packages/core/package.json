@@ -1,0 +1,15 @@
+{
+  "name": "@pansy/example-core",
+  "private": true,
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo \"Build core\"",
+    "publish": "echo \"Publish core\"",
+    "publish:beta": "walrus publish-beta"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

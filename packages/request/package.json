@@ -1,10 +1,13 @@
 {
   "name": "@pansy/example-request",
+  "private": true,
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "echo \"Build request\""
+    "build": "echo \"Build request\"",
+    "publish": "echo \"Publish request\"",
+    "publish:beta": "echo \"Publish beta request\""
   },
   "keywords": [],
   "author": "",
