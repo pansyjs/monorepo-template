@@ -9,6 +9,10 @@
     "release": "walrus release",
     "release:canary": "walrus release-canary",
     "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "test:cov": "vitest run --coverage",
+    "lint": "eslint --cache .",
+    "lint:fix": "nr lint --fix",
     "prepare": "husky || true",
     "preinstall": "npx only-allow pnpm"
   },
