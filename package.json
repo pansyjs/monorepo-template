@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "release": "walrus release",
-    "release:canary": "nx affected -t release:canary && nx run-many --target=publish --tag canary",
+    "release:canary": "walrus release-canary",
     "publish": "nx affected -t publish",
     "typecheck": "tsc --noEmit",
     "prepare": "husky || true",

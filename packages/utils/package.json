@@ -5,7 +5,7 @@
   "scripts": {
     "build": "tsup",
     "publish": "pnpm publish",
-    "release:canary": "walrus release-canary"
+    "canary:version": "walrus canary-version"
   },
   "files": [
     "dist"
