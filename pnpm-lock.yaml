@@ -29,6 +29,9 @@ importers:
       '@nx/workspace':
         specifier: ^19.4.1
         version: 19.4.1
+      '@types/signale':
+        specifier: ^1.4.7
+        version: 1.4.7
       '@vitest/ui':
         specifier: ^1.6.0
         version: 1.6.0(vitest@1.6.0)
@@ -1494,6 +1497,9 @@ packages:
 
   '@types/semver@7.5.8':
     resolution: {integrity: sha512-I8EUhyrgfLrcTkzV3TSsGyl1tSuPrEDzr0yd5m90UgNxQkyDXULk3b6MlQqTCpZpNtWe1K0hzclnZkTcLBe2UQ==}
+
+  '@types/signale@1.4.7':
+    resolution: {integrity: sha512-nc0j37QupTT7OcYeH3gRE1ZfzUalEUsDKJsJ3IsJr0pjjFZTjtrX1Bsn6Kv56YXI/H9rNSwAkIPRxNlZI8GyQw==}
 
   '@ungap/structured-clone@1.2.0':
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
@@ -5968,6 +5974,10 @@ snapshots:
   '@types/parse-json@4.0.2': {}
 
   '@types/semver@7.5.8': {}
+
+  '@types/signale@1.4.7':
+    dependencies:
+      '@types/node': 20.14.10
 
   '@ungap/structured-clone@1.2.0': {}
 
