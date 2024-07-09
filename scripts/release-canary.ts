@@ -8,9 +8,15 @@ const git = simpleGit();
 const logger = createLogger('release:canary');
 
 (async () => {
+  const status = await git.status();
   const branch = await git.branch();
 
   logger.info(`当前分支: ${branch.current}`);
+
+  if (status.files.length !== 0) {
+    logger.error('还有未提交的代码');
+    process.exit(1);
+  }
 
   if (branch.current === MASTER_BRANCH) {
     logger.error('不能在主分支发布');
@@ -24,7 +30,7 @@ const logger = createLogger('release:canary');
 
   logger.info(`修改所有变更包的版本`);
 
-  await $`nx affected -t canary:version`;
+  await $`nx affected -t canary:version --base=${branch.current}`;
 
   logger.info(`提交版本变更`);
 
@@ -39,5 +45,5 @@ const logger = createLogger('release:canary');
 
   logger.info(`发布所有变更包`);
 
-  await $`nx affected -t publish:npm --tag canary --publish-branch ${branch.current}`;
+  await $`nx affected -t publish:npm --base=${branch.current} --tag canary --publish-branch ${branch.current}`;
 })();
