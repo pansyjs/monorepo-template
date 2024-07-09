@@ -46,6 +46,7 @@
     "signale": "^1.4.0",
     "simple-git": "^3.25.0",
     "stylelint": "^16.6.1",
+    "syncpack": "^12.3.3",
     "tsup": "^8.1.0",
     "tsx": "^4.16.2",
     "typescript": "^5.5.3",
