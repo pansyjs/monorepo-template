@@ -10,11 +10,10 @@ const git = simpleGit();
 const cwd = process.cwd();
 const logger = createLogger('publish:beta');
 
-function getNextVersion(branch: string) {
-  const branchName = branch.replace(/\//g, '-');
+function getNextVersion(currentVersion: string) {
   const random = generateRandomString();
 
-  return `${branchName}.${random}.${dayjs().format('YYYYMMDD')}`;
+  return `${currentVersion.split('-')[0]}-canary.${random}.${dayjs().format('YYYYMMDD')}`;
 }
 
 (async () => {
@@ -22,7 +21,7 @@ function getNextVersion(branch: string) {
   const branch = await git.branch();
   const current = await fs.readJSON(packageJsonPath);
 
-  const version = getNextVersion(branch.current)
+  const version = getNextVersion(current.version)
   current.version = version;
 
   logger.info(`修改 ${current.name} 版本为 ${version}`);

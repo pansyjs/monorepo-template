@@ -1,6 +1,6 @@
 {
   "name": "@pansy/example-core",
-  "version": "feat-core.0MqUas5Buj.20240709",
+  "version": "0.0.1",
   "description": "Monorepo 示例包 - core",
   "scripts": {
     "build": "tsup",
