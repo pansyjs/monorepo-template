@@ -1,6 +1,7 @@
 import 'zx/globals'
 import simpleGit from 'simple-git';
 import { createLogger } from './utils/signale';
+import { getPath } from './utils/getPath';
 import { MASTER_BRANCH } from './.internal/constants';
 
 const git = simpleGit();
@@ -25,7 +26,14 @@ const logger = createLogger('release:canary');
 
   await $`nx run-many --target=canary:version`;
 
+  await $`pnpm`;
+  await git.add([
+    getPath('packages'),
+    getPath('package.json'),
+    getPath('pnpm-lock.yaml')
+  ]);
+
   logger.info(`发布所有变更包`);
 
-  await $`nx run-many --target=publish --tag canary`;
+  await $`nx run-many --target=publish  --tag canary`;
 })();

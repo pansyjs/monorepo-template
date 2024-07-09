@@ -7,9 +7,6 @@
     },
     "publish": {
       "dependsOn": ["build"]
-    },
-    "publish:beta": {
-      "dependsOn": ["build"]
     }
   }
 }
