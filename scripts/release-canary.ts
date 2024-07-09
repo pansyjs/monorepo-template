@@ -24,7 +24,7 @@ const logger = createLogger('release:canary');
 
   logger.info(`修改变更包的版本`);
 
-  await $`nx run-many --target=canary:version`;
+  await $`nx affected -t canary:version`;
 
   logger.info(`提交版本变更`);
 
@@ -36,4 +36,6 @@ const logger = createLogger('release:canary');
   ]);
   await git.commit(`chore(release): canary`);
   await git.push();
+
+  await $`nx affected -t publish:npm --tag canary --publish-branch ${branch.current}`;
 })();
