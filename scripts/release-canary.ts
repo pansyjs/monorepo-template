@@ -34,7 +34,6 @@ const logger = createLogger('release:canary');
 
   logger.info(`提交版本变更`);
 
-  await $`pnpm i`;
   await git.add([
     getPath('packages'),
     getPath('package.json'),
