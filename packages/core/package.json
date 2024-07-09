@@ -1,6 +1,6 @@
 {
   "name": "@pansy/example-core",
-  "version": "0.0.1-canary.GwNNI4JhHN.20240709",
+  "version": "0.0.1-canary.s1ACO20HIk.20240709",
   "description": "Monorepo 示例包 - core",
   "scripts": {
     "build": "tsup",
