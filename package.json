@@ -1,6 +1,10 @@
 {
   "name": "@pansy/workspace",
   "private": true,
+  "packageManager": "pnpm@9.4.0",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "release": "walrus release",
     "release:canary": "walrus release-canary",
@@ -44,8 +48,9 @@
     "walrus": "workspace:*",
     "zx": "^8.1.4"
   },
-  "packageManager": "pnpm@9.4.0",
-  "engines": {
-    "node": ">=18"
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --cache --fix"
+    ]
   }
 }

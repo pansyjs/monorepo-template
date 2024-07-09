@@ -2,19 +2,19 @@
   "name": "@pansy/example-utils",
   "version": "0.0.2-canary.r4WQXNBfCe.20240709",
   "description": "Monorepo 示例包 - utils",
+  "license": "MIT",
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup",
     "publish:npm": "pnpm publish",
     "canary:version": "walrus canary-version"
   },
-  "files": [
-    "dist"
-  ],
-  "sideEffects": false,
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
-  "license": "MIT",
   "publishConfig": {
     "access": "public"
   }
