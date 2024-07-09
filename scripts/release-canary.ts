@@ -36,5 +36,6 @@ const logger = createLogger('release:canary');
 
   logger.info(`发布所有变更包`);
 
+  await $`nx affected -t build`;
   await $`nx affected -t publish --tag canary --publish-branch ${branch.current}`;
 })();
