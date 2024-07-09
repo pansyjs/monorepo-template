@@ -1,6 +1,6 @@
 {
   "name": "@pansy/example-request",
-  "version": "0.0.1-canary.6NSeZB0i98.20240709",
+  "version": "0.0.1-canary.rkeeqYJQs8.20240709",
   "description": "Monorepo 示例包 - request",
   "scripts": {
     "build": "tsup",
