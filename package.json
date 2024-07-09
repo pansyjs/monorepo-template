@@ -9,6 +9,8 @@
     "preinstall": "npx only-allow pnpm"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^2.21.3",
+    "@antfu/ni": "^0.21.12",
     "@changesets/cli": "^2.27.7",
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
