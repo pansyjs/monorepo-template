@@ -1,3 +1,4 @@
+import 'zx/globals'
 import path from 'node:path';
 import fs from 'fs-extra';
 import simpleGit from 'simple-git';
@@ -33,4 +34,8 @@ function getNextVersion(branch: string) {
   logger.info(`修改 ${current.name} 版本为 ${version}`);
 
   await fs.writeJSON(packageJsonPath, current, { spaces: 2 });
+
+  logger.info(`发布 ${current.name}`);
+
+  await $`pnpm publish`
 })();
