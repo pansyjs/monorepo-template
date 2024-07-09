@@ -30,7 +30,7 @@ const logger = createLogger('release:canary');
 
   logger.info(`修改所有变更包的版本`);
 
-  await $`nx affected -t canary:version --base=${branch.current}`;
+  await $`nx affected -t canary:version`;
 
   logger.info(`提交版本变更`);
 
@@ -45,5 +45,5 @@ const logger = createLogger('release:canary');
 
   logger.info(`发布所有变更包`);
 
-  await $`nx affected -t publish:npm --base=${branch.current} --tag canary --publish-branch ${branch.current}`;
+  await $`nx affected -t publish:npm --tag canary --publish-branch ${branch.current}`;
 })();
