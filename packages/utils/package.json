@@ -1,15 +1,21 @@
 {
   "name": "@pansy/example-utils",
-  "private": true,
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.1",
+  "description": "Monorepo 示例包 - utils",
   "scripts": {
-    "build": "echo \"Build utils\"",
-    "publish": "echo \"Publish utils\"",
+    "build": "tsup",
+    "publish": "echo \"Publish core\"",
     "publish:beta": "walrus publish-beta"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
 }

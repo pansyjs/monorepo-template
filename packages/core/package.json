@@ -1,15 +1,21 @@
 {
   "name": "@pansy/example-core",
-  "private": true,
   "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "description": "Monorepo 示例包 - core",
   "scripts": {
-    "build": "echo \"Build core\"",
+    "build": "tsup",
     "publish": "echo \"Publish core\"",
     "publish:beta": "walrus publish-beta"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
 }
