@@ -16,8 +16,6 @@ const logger = createLogger('release:canary');
     process.exit(1);
   }
 
-  logger.info(`当前分支: ${branch.current}`);
-
   const pull = await git.pull();
   if (pull?.summary?.changes) {
     logger.info('远程存在未拉取的提交');
