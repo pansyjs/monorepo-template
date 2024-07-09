@@ -1,5 +1,12 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "defaultBase": "main",
-  "targetDefaults": {}
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"]
+    },
+    "publish": {
+      "dependsOn": ["build"]
+    }
+  }
 }
