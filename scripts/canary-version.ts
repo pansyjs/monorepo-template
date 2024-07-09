@@ -14,7 +14,7 @@ function getNextVersion(branch: string) {
   const branchName = branch.replace(/\//g, '-');
   const random = generateRandomString();
 
-  return `${branchName}-${random}-${dayjs().format('YYYYMMDD')}`;
+  return `${branchName}.${random}.${dayjs().format('YYYYMMDD')}`;
 }
 
 (async () => {
