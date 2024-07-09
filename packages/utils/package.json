@@ -1,6 +1,6 @@
 {
   "name": "@pansy/example-utils",
-  "version": "0.0.2-canary.24OejWWOyz.20240709",
+  "version": "0.0.2-canary.BpqvjsFSSL.20240709",
   "description": "Monorepo 示例包 - utils",
   "scripts": {
     "build": "tsup",
