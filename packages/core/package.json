@@ -17,5 +17,8 @@
   "license": "MIT",
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "@pansy/example-utils": "workspace:*"
   }
 }
