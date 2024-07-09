@@ -2,6 +2,7 @@
   "name": "@pansy/workspace",
   "private": true,
   "scripts": {
+    "release": "walrus release",
     "publish": "nx affected -t publish",
     "publish:beta": "nx affected -t publish:beta",
     "typecheck": "tsc --noEmit",
