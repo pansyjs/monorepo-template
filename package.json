@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "publish": "nx affected -t publish",
+    "publish:beta": "nx affected -t publish:beta",
     "typecheck": "tsc --noEmit",
     "prepare": "husky || true",
     "preinstall": "npx only-allow pnpm"

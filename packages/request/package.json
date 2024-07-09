@@ -7,7 +7,7 @@
   "scripts": {
     "build": "echo \"Build request\"",
     "publish": "echo \"Publish request\"",
-    "publish:beta": "echo \"Publish beta request\""
+    "publish:beta": "walrus publish-beta"
   },
   "keywords": [],
   "author": "",
