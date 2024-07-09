@@ -93,9 +93,17 @@ importers:
         specifier: ^8.1.4
         version: 8.1.4
 
-  packages/core: {}
+  packages/core:
+    dependencies:
+      '@pansy/example-utils':
+        specifier: workspace:*
+        version: link:../utils
 
-  packages/request: {}
+  packages/request:
+    dependencies:
+      '@pansy/example-utils':
+        specifier: workspace:*
+        version: link:../utils
 
   packages/utils: {}
 
