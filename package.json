@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "release": "walrus release",
-    "release:canary": "walrus release-canary",
+    "release:canary": "walrus release-canary && publish:canary",
     "publish": "nx affected -t publish",
     "publish:canary": "nx affected -t publish --tag canary --publish-branch feat/core",
     "typecheck": "tsc --noEmit",
