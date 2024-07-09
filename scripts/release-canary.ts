@@ -22,7 +22,7 @@ const logger = createLogger('release:canary');
     logger.info('远程存在未拉取的提交');
   }
 
-  logger.info(`修改变更包的版本`);
+  logger.info(`修改所有变更包的版本`);
 
   await $`nx affected -t canary:version`;
 
@@ -36,6 +36,8 @@ const logger = createLogger('release:canary');
   ]);
   await git.commit(`chore(release): canary`);
   await git.push();
+
+  logger.info(`发布所有变更包`);
 
   await $`nx affected -t publish:npm --tag canary --publish-branch ${branch.current}`;
 })();
