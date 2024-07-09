@@ -10,6 +10,7 @@
     "release:canary": "walrus release-canary",
     "typecheck": "tsc --noEmit",
     "test": "vitest",
+    "nx:graph": "nx graph",
     "test:cov": "vitest run --coverage",
     "lint": "eslint --cache .",
     "lint:fix": "nr lint --fix",
