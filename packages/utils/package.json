@@ -1,6 +1,6 @@
 {
   "name": "@pansy/example-utils",
-  "version": "0.0.1",
+  "version": "feat-core-VAmXG8mJwC-20240709",
   "description": "Monorepo 示例包 - utils",
   "scripts": {
     "build": "tsup",
