@@ -20,4 +20,8 @@ const logger = createLogger('release');
   if (pull?.summary?.changes) {
     logger.info('远程存在未拉取的提交');
   }
+
+  logger.info(`changeset add`);
+
+  await $`pnpm changeset add`;
 })();
