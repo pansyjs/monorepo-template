@@ -4,7 +4,7 @@
   "description": "Monorepo 示例包 - request",
   "scripts": {
     "build": "tsup",
-    "publish": "pnpm publish",
+    "publish:npm": "pnpm publish",
     "canary:version": "walrus canary-version"
   },
   "files": [

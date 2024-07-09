@@ -5,7 +5,7 @@
     "build": {
       "dependsOn": ["^build"]
     },
-    "publish": {
+    "publish:npm": {
       "dependsOn": ["build"]
     }
   }
